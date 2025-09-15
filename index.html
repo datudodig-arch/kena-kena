@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our 3rd Anniversary</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/833/833472.png">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdf2f5;
+            overflow-x: hidden;
+        }
+
+        .heart {
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.1);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .polaroid {
+            background: white;
+            padding: 1rem 1rem 3rem 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transform: rotate(-2deg);
+            transition: all 0.3s ease;
+        }
+
+            .polaroid:hover {
+                transform: rotate(0deg) scale(1.05);
+            }
+
+        .love-letter {
+            background: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+            border-left: 4px solid #f472b6;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Background Music (hidden) -->
+    <audio id="bgMusic" loop>
+        <source src="C:/Users/user/Desktop/dats/sher/music/our-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-2">
+                    <i data-feather="heart" class="text-pink-500"></i>
+                    <span class="text-xl font-semibold text-pink-600">Our 3rd Year</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#memories" class="text-pink-600 hover:text-pink-800 transition">Memories</a>
+                    <a href="#letter" class="text-pink-600 hover:text-pink-800 transition">Love Letter</a>
+                    <a href="#moments" class="text-pink-600 hover:text-pink-800 transition">Special Moments</a>
+                </div>
+                <button id="musicToggle" class="p-2 rounded-full bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                    <i data-feather="music"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+        <div class="text-center py-12" data-aos="fade-up">
+            <div class="heart inline-block mb-6">
+                <i data-feather="heart" class="w-16 h-16 text-pink-500"></i>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold text-pink-700 mb-4 font-dancing">Happy 3rd Anniversary</h1>
+            <p class="text-xl text-pink-600 max-w-2xl mx-auto">Three years of love, laughter, and beautiful memories together</p>
+            <button id="playBtn" class="mt-8 px-6 py-3 bg-pink-500 text-white rounded-full hover:bg-pink-600 transition flex items-center mx-auto">
+                <i data-feather="play" class="mr-2"></i> Play Our Song
+            </button>
+        </div>
+    </section>
+
+    <!-- Memories Gallery -->
+    <section id="memories" class="py-16 bg-pink-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-pink-700 mb-12" data-aos="fade-up">Our Beautiful Memories</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Photo 1 -->
+                <div class="polaroid" data-aos="flip-left">
+                    <img src="pics/1.jpg" alt="Our memory" class="w-full h-64 object-cover">
+                    <p class="text-center mt-4 text-gray-600">Our first meet</p>
+                </div>
+                <!-- Photo 2 -->
+                <div class="polaroid" data-aos="flip-left" data-aos-delay="100">
+                    <img src="pics/2.jpg" alt="Our memory" class="w-full h-64 object-cover">
+                    <p class="text-center mt-4 text-gray-600">Senior High Grad</p>
+                </div>
+                <!-- Photo 3 -->
+                <div class="polaroid" data-aos="flip-left" data-aos-delay="200">
+                    <img src="pics/3.jpg" alt="Our memory" class="w-full h-64 object-cover">
+                    <p class="text-center mt-4 text-gray-600">Beach getaway</p>
+                </div>
+                <!-- Photo 4 -->
+                <div class="polaroid" data-aos="flip-left">
+                    <img src="pics/4.jpg" alt="Our memory" class="w-full h-64 object-cover">
+                    <p class="text-center mt-4 text-gray-600">Memorable dinner</p>
+                </div>
+                <!-- Photo 5 -->
+                <div class="polaroid" data-aos="flip-left" data-aos-delay="100">
+                    <img src="pics/5.jpg" alt="Our memory" class="w-full h-64 object-cover">
+                    <p class="text-center mt-4 text-gray-600">Just us</p>
+                </div>
+                <!-- Photo 6 -->
+                <div class="polaroid" data-aos="flip-left" data-aos-delay="200">
+                    <img src="pics/6.jpg" alt="Our memory" class="w-full h-64 object-cover">
+                    <p class="text-center mt-4 text-gray-600">Summer Vacation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Letter -->
+    <section id="letter" class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="love-letter p-8 md:p-12 rounded-lg shadow-lg" data-aos="zoom-in">
+                <h2 class="text-3xl font-bold text-pink-700 mb-6 text-center font-dancing">Ang Liham ko for you ;)</h2>
+                <div class="prose max-w-none text-gray-700">
+                    <p class="mb-4">Dear Lalove,</p>
+                    <p class="mb-4">First of all, I wanna say I love you so muchhhhhh hihi. Super duper thankful ako na nakilala kita and syempre ang mapasakin ka haha, diko rin akalain na mag-abot tayo sa gantong sitwasyon kay nung una pansin ko na talaga ang diff. sa ugali natin pero syempre wis patinag tayo jan tol. Actually sa mga oras na'to diko rin alam ano talaga ang sabihin ko sayo pero yung excitement ko kasi 3 yrs na tayo is umaapaw hahahha. Gusto ko lang na magstay tayo as ganito kahit may away man or tampuhan na still oks parin kaya dakan beg worry if di kita ginakulit pag mag-away tayo kay gusto ko lang na mag cool down ako para makaiwas tayo sa away kaya sorry bu lagi lalove ko ang thank you din always sa pag-intindi. Btw, wag mo na intindihin itong typings ko kay diko man maperfect ang tamang symbols na gamitin, ang importante mahal ko seka hihi</p>
+                    <p class="mb-4">Hoping ako na dikena bu sya edtman inya lekita ah tudtulan and kung maging tademan man inya na sana taman sa taman ah di kalipatanan, syempre sekita parin pero tademan kay past natin hihi basta importante ah love ko seka na tuden ba intu dakan pakatalu!</p>
+                    <p class="mb-4">Salig kabun salaki lalove sa mana kapedsalig ko salka sa daw taman e magaga ta na padtamanen ta. Always ako here for u not just ur bf but also your best friend, ur rant buddy, and everything na want mo maging, na always ako here for u kaya isalig mo saken ang iyong buong puso ;)</p>
+                    <p class="mb-4">Corny ba? Ediwow HAHAHAHHAHA dapan nelay ko ah love letter ah manya pero at least ma express ko ang totoong gusto kong sabihin hihi kaya pakategel ka always lalove ko, rooting for u po my love mwahpsss</p>
+                    <p class="mb-4">Forever yours, Kiflee</p>
+                    <p>❤️</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Moments -->
+    <section id="moments" class="py-16 bg-pink-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-pink-700 mb-12" data-aos="fade-up">Our Special Moments</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-right">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                            <i data-feather="calendar" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-pink-700">Our First Meet</h3>
+                    </div>
+                    <p class="text-gray-600">September 14, 2022 around 4pm - Ito yung day na halong kaba and excitement ang mafeel ko hahaha. Yung tipong ihatid ko pa si frog sa gate kay ayaw mo tas kayo ni mess heart (ney) gawait sa tapat ng library, tas paglingon ko pabalik nanjan na kayo. Wholesome moment talaga yun for me kaya diko malimutan hihi :)</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-left" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                            <i data-feather="home" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-pink-700">First Laag Together</h3>
+                    </div>
+                    <p class="text-gray-600">May 28, 2024 - HAHAHA ito yung nag grannys tayo na grabe mo ka praning tas ako naman na instead mag practice para sa sayaw namin sa school na sumibat pa ako para sa gala natin. Thankful masyado ako sa mga risky na ginawa mo, although wala man din tayong masamang ginawa pero syempre takot ka makita ng fam mo kaya arigathankss ged lalove ko.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-right" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                            <i data-feather="heart" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-pink-700">Unforgettable Moments"</h3>
+                    </div>
+                    <p class="text-gray-600">Madami na tayong ganap dito sa bahay pero for me yun masyado ang gina tresure ko na moments kasi always ako sa bahay syempre kaya lagi ko maalala ang bawat kulitan and harutan natin sa bahay kaya no specific date yet still diko malilimutan every single day na nandito ka sa bahay kaya thankyouuu ged lalove koo! </p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md" data-aos="fade-left" data-aos-delay="300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center mr-4">
+                            <i data-feather="star" class="text-pink-500"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-pink-700">Looking Forward</h3>
+                    </div>
+                    <p class="text-gray-600">Isa lang talaga ang nais ko makamit with you lalove hihi, ang magkaroon ng sariling bahay with you ;) And also in shaa Allah na gusto ko rin makatravel soon with u bago mag settle sa pang matandang buhay hahaha.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-pink-700 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="heart inline-block mb-6">
+                <i data-feather="heart" class="w-12 h-12 text-white"></i>
+            </div>
+            <p class="text-xl mb-4">Thank you ged lalove ko for 3 incredible years</p>
+            <p class="text-pink-100">I love you so muchhhh! mwah mwah mwahpsxx</p>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        feather.replace();
+
+        const musicPlayer = document.getElementById('bgMusic');
+        const playBtn = document.getElementById('playBtn');
+        const musicToggle = document.getElementById('musicToggle');
+        let isPlaying = false;
+
+        playBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                musicPlayer.pause();
+                playBtn.innerHTML = '<i data-feather="play" class="mr-2"></i> Play Our Song';
+            } else {
+                musicPlayer.play();
+                playBtn.innerHTML = '<i data-feather="pause" class="mr-2"></i> Pause';
+            }
+            isPlaying = !isPlaying;
+            feather.replace();
+        });
+
+        musicToggle.addEventListener('click', () => {
+            if (musicPlayer.paused) {
+                musicPlayer.play();
+                musicToggle.innerHTML = '<i data-feather="volume-2"></i>';
+            } else {
+                musicPlayer.pause();
+                musicToggle.innerHTML = '<i data-feather="volume-x"></i>';
+            }
+            feather.replace();
+        });
+    </script>
+</body>
+</html>
